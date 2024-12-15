@@ -1,0 +1,12 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      navigatingTo="onNavigatingTo" 
+      actionBarHidden="true">
+    <GridLayout>
+        <StackLayout class="glass p-4 text-center">
+            <Image src="~/assets/logo.png" width="150" height="150" class="mb-4" />
+            <Label text="Tutor AI" class="h1 text-primary mb-2" />
+            <Label text="Your Smart Study Assistant" class="h2 mb-4" />
+            <ActivityIndicator busy="true" color="#A4C8E1" />
+        </StackLayout>
+    </GridLayout>
+</Page>

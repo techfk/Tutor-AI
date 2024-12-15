@@ -1,0 +1,31 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Sign In" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Image src="~/assets/logo.png" width="100" height="100" class="mb-4" />
+            
+            <StackLayout class="form">
+                <Label text="Email" class="text-gray-600" />
+                <TextField text="{{ email }}" hint="Enter your email" 
+                          keyboardType="email" class="p-2 border-b mb-4" />
+                
+                <Label text="Password" class="text-gray-600" />
+                <TextField text="{{ password }}" hint="Enter your password" 
+                          secure="true" class="p-2 border-b mb-4" />
+                
+                <Button text="Sign In" tap="{{ onSignIn }}" 
+                        class="bg-blue-500 text-white p-4 rounded-lg mb-2" />
+                
+                <Button text="Continue with Google" tap="{{ onGoogleSignIn }}"
+                        class="bg-white text-black p-4 rounded-lg border mb-2" />
+                
+                <Button text="Continue as Guest" tap="{{ onGuestAccess }}"
+                        class="text-gray-500 p-2" />
+                
+                <Label text="Forgot Password?" tap="{{ onForgotPassword }}"
+                       class="text-blue-500 text-center p-2" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</Page>

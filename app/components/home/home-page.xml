@@ -1,0 +1,49 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      navigatingTo="onNavigatingTo"
+      class="page">
+    <ActionBar title="Tutor AI" class="glass" flat="true" />
+    
+    <GridLayout rows="auto, *, auto">
+        <!-- Welcome Section -->
+        <StackLayout row="0" class="glass p-4">
+            <Label text="{{ welcomeMessage }}" class="h1" />
+            <Label text="{{ lastStudySession }}" class="body" />
+        </StackLayout>
+
+        <!-- Main Content -->
+        <ScrollView row="1">
+            <StackLayout class="p-4">
+                <!-- Quick Actions -->
+                <GridLayout columns="*, *" rows="auto, auto" class="mb-4">
+                    <Button text="Ask Question" tap="{{ onAskQuestion }}" 
+                            class="btn btn-primary m-1" col="0" row="0" />
+                    <Button text="Study Notes" tap="{{ onViewNotes }}"
+                            class="btn btn-secondary m-1" col="1" row="0" />
+                    <Button text="Practice Quiz" tap="{{ onStartQuiz }}"
+                            class="btn btn-accent m-1" col="0" row="1" />
+                    <Button text="Progress" tap="{{ onViewProgress }}"
+                            class="btn btn-primary m-1" col="1" row="1" />
+                </GridLayout>
+
+                <!-- Recommendations -->
+                <Label text="Recommended for You" class="h2 mb-2" />
+                <ListView items="{{ recommendations }}" class="list-group">
+                    <ListView.itemTemplate>
+                        <StackLayout class="glass card">
+                            <Label text="{{ title }}" class="h2" />
+                            <Label text="{{ description }}" class="body" />
+                        </StackLayout>
+                    </ListView.itemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Bottom Navigation -->
+        <GridLayout row="2" columns="*, *, *, *" class="glass p-2">
+            <Label text="Home" class="text-center text-primary" col="0" />
+            <Label text="Study" class="text-center" col="1" />
+            <Label text="Chat" class="text-center" col="2" />
+            <Label text="Profile" class="text-center" col="3" />
+        </GridLayout>
+    </GridLayout>
+</Page>

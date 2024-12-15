@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form TextField {
+    font-size: 16;
+    padding: 10;
+    margin-bottom: 10;
+}
+
+.btn {
+    font-size: 18;
+    padding: 10;
+    margin: 10;
+    border-radius: 5;
+}
+
+.btn-primary {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #374151;
+    border-width: 1;
+    border-color: #d1d5db;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.rounded {
+    border-radius: 8;
+}
+
+.shadow {
+    box-shadow: 0 2 4 rgba(0, 0, 0, 0.1);
+}

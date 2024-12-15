@@ -1,0 +1,24 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" actionBarHidden="true">
+    <GridLayout rows="*, auto">
+        <ListView items="{{ slides }}" row="0">
+            <ListView.itemTemplate>
+                <GridLayout rows="*, auto" class="p-4">
+                    <StackLayout row="0" class="text-center p-4">
+                        <Image src="{{ image }}" width="200" height="200" class="mb-4" />
+                        <Label text="{{ title }}" class="text-2xl font-bold mb-2" />
+                        <Label text="{{ description }}" textWrap="true" class="text-gray-600" />
+                    </StackLayout>
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+        
+        <StackLayout row="1" class="p-4">
+            <Button text="{{ isLastSlide ? 'Get Started' : 'Next' }}" 
+                    tap="{{ onNextTap }}"
+                    class="bg-blue-500 text-white p-4 rounded-lg" />
+            <Button text="Skip" tap="{{ onSkipTap }}" 
+                    visibility="{{ isLastSlide ? 'collapsed' : 'visible' }}"
+                    class="text-gray-500 p-2" />
+        </StackLayout>
+    </GridLayout>
+</Page>

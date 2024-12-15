@@ -1,0 +1,63 @@
+/* Global Styles */
+.page {
+  background-color: #FFFFFF;
+}
+
+/* Glass Effect */
+.glass {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10);
+  border-width: 1;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Buttons */
+.btn {
+  font-size: 16;
+  padding: 12 24;
+  border-radius: 8;
+  animation-duration: 0.2;
+}
+
+.btn-primary {
+  background-color: #A4C8E1;
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  background-color: #B2E0B2;
+  color: #333333;
+}
+
+.btn-accent {
+  background-color: #FFA500;
+  color: #FFFFFF;
+}
+
+/* Cards */
+.card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12;
+  margin: 8;
+  padding: 16;
+}
+
+/* Typography */
+.h1 {
+  font-size: 24;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 8;
+}
+
+.h2 {
+  font-size: 20;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 8;
+}
+
+.body {
+  font-size: 16;
+  color: #666666;
+}
